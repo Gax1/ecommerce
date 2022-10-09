@@ -3,8 +3,8 @@
 ### About the project
 
 - For this project I will work with React Redux-Toolkit in JavaScript and Style-Components.
-- For handling the API request I will use Axios and Custom Hook.
-- For the Routes I will work with React-Router-Dom
+- To handle the API requests I will use Axios and a Custom Hook.
+- For the Routes I will use React-Router-Dom
 - I will work with small components and Unit Testing with Testing Library.
 - It will be deployed in Netlify:
   - gabrielandres-ecommerce.netlify.app
@@ -13,10 +13,10 @@
 
 # Facing the project
 
-- I will start with the creation of the store and the Api Handlers
-- After the store and handlers are ready i will start developing the UI interface starting with small components
-- For the component's I will do unit testing
-- For reaching a good quality code i will use husky hooks and github actions for audit my code
+- I will start with the creation of the store and the API Handlers
+- Once the store and handlers are ready, I will start developing the UI interface
+- I will write unit tests for the components
+- To reach a good quality code I will use Husky hooks and Github Actions to audit my code
 
 # Scripts
 

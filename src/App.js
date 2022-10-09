@@ -1,11 +1,8 @@
 import React from "react";
+import Header from "./components/Header/Header";
 
 function App() {
-  return (
-    <>
-      <p>Page in progress</p>
-    </>
-  );
+  return <Header itemsOnCart={10} />;
 }
 
 export default App;
