@@ -7,8 +7,9 @@
 - For the Routes I will work with React-Router-Dom
 - I will work with small components and Unit Testing with Testing Library.
 - It will be deployed in Netlify:
-
--
+  - gabrielandres-ecommerce.netlify.app
+- Sonarcloud analysis link:
+  - https://sonarcloud.io/summary/overall?id=Gax1_ecommerce
 
 # Facing the project
 
