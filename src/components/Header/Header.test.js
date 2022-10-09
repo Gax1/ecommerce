@@ -1,13 +1,14 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import Wrapper from "../../test-utils/wrapper/wrapper";
 import Header from "./Header";
+import userEvent from "@testing-library/user-event";
 
 describe("Given a Header component", () => {
+  const breadcrumbText = "Home";
+  const itemsOnCart = 10;
   describe("When rendered", () => {
     test("Then it should show a title, a breadcrumb and the number of items in cart", () => {
-      const itemsOnCart = 10;
       const titleText = "E-Commerce";
-      const breadcrumbText = "Home";
 
       render(
         <Wrapper>
@@ -22,6 +23,25 @@ describe("Given a Header component", () => {
       expect(title).toBeInTheDocument();
       expect(numberOfItems).toBeInTheDocument();
       expect(breadcrumb).toBeInTheDocument();
+    });
+  });
+  describe("When the home link is clicked", () => {
+    test("Then it should call the onclick method of the Link component", async () => {
+      render(
+        <Wrapper>
+          <Header itemsOnCart={itemsOnCart} />
+        </Wrapper>
+      );
+
+      const breadcrumb = screen.getByRole("link", { name: breadcrumbText });
+
+      breadcrumb.onclick = jest.fn();
+
+      await userEvent.click(breadcrumb);
+
+      await waitFor(() => {
+        expect(breadcrumb.onclick).toHaveBeenCalled();
+      });
     });
   });
 });
