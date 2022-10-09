@@ -1,5 +1,5 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import Wrapper from "../../test-utils/wrapper/wrapper";
+import Wrapper from "../../test-utils/Wrapper/Wrapper";
 import Header from "./Header";
 import userEvent from "@testing-library/user-event";
 
