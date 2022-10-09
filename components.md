@@ -105,6 +105,7 @@
     - click on Add Button
 
 - Details page:
+
   - Receives:
     - an item
   - State:
@@ -113,5 +114,38 @@
     - Details card
     - Image component
     - Actions component
+  - User interactions:
+    - none
+
+- Not found page:
+
+  - Receives:
+    - none
+  - State:
+    - none
+  - Show:
+    - a message of not found page
+  - User interactions:
+    - none
+
+- Modal
+
+  - Receives:
+    - a success message or a failure message
+  - State:
+    - none
+  - Show:
+    - a message of the succeeded or fail action
+    - button for close the modal
+  - User interactions:
+    - close the modal
+
+- Loading spinner
+  - Receives:
+    - none
+  - State:
+    - none
+  - Show:
+    - spinner
   - User interactions:
     - none
