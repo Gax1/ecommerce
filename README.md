@@ -15,6 +15,7 @@
 - I will start with the creation of the store and the Api Handlers
 - After the store and handlers are ready i will start developing the UI interface starting with small components
 - For the component's I will do unit testing
+- For reaching a good quality code i will use husky hooks and github actions for audit my code
 
 # Scripts
 
