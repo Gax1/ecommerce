@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialCellphonesState = [{}];
 
-const cellphonesSlice = createSlice({
+const cellphoneSlice = createSlice({
   name: "cellphone",
   initialState: initialCellphonesState,
   reducers: {
@@ -10,7 +10,7 @@ const cellphonesSlice = createSlice({
   },
 });
 
-export const cellphoneReducer = cellphonesSlice.reducer;
+export const cellphoneReducer = cellphoneSlice.reducer;
 
 export const { uploadCellPhones: uploadCellPhonesActionCreator } =
-  cellphonesSlice.actions;
+  cellphoneSlice.actions;
