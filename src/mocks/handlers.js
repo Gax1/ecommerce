@@ -7,6 +7,6 @@ export const handlers = [
     const status = 200;
     const response = cellphonesTestList;
 
-    return res((ctx.status = status), ctx.json(response));
+    return res(ctx.status(status), ctx.json(response));
   }),
 ];

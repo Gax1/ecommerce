@@ -1,4 +1,4 @@
-import { cellphonesList } from "../../../test-utils/utils/test-variables";
+import { cellphonesTestList } from "../../../test-utils/utils/test-variables";
 import {
   cellphoneReducer,
   uploadCellPhonesActionCreator,
@@ -8,7 +8,7 @@ describe("Given a cellphoneSlice", () => {
   describe("When its called with uploadCellPhonesActionCreator and an Action with a payload", () => {
     test("Then it should return the payload", () => {
       const initialCellphonesState = [{}];
-      const actionPayload = cellphonesList;
+      const actionPayload = cellphonesTestList;
 
       const uploadedCellphones = cellphoneReducer(
         initialCellphonesState,
