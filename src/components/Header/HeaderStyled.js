@@ -18,14 +18,17 @@ const HeaderStyled = styled.header`
       margin-top: 25px;
     }
     &__itemsOnCart {
-      width: 60px;
-      height: 60px;
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       border: 1.5px solid grey;
       box-shadow: grey 0px 2px 2px;
+      padding: 10px 8px;
+
+      &--cart {
+        width: 38px;
+      }
     }
     &__breadcrumb {
       text-align: center;
