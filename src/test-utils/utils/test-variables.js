@@ -27,5 +27,5 @@ export const cellphoneDetailTest = {
   primaryCamera: ["test-MP", "test"],
   os: "test-os",
   dimentions: "test-dimentions",
-  wight: "test-weight",
+  weight: "test-weight",
 };

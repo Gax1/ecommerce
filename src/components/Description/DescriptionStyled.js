@@ -5,6 +5,7 @@ const DescriptionStyled = styled.div`
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+  width: 600px;
   .description {
     &__title {
       font-weight: 400;

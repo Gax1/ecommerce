@@ -12,7 +12,7 @@ const Description = ({
     primaryCamera,
     os,
     dimentions,
-    wight,
+    weight,
   },
 }) => {
   return (
@@ -47,8 +47,26 @@ const Description = ({
             Main Camera
           </span>
           <span className="description__detail--value">
-            `{primaryCamera[0]} - {primaryCamera[1]}`
+            {primaryCamera[0]} - {primaryCamera[1]}
           </span>
+        </li>
+        <li className="description__detail-item">
+          <span className="description__detail--name" key={"Operative System"}>
+            Operative System
+          </span>
+          <span className="description__detail--value">{os}</span>
+        </li>
+        <li className="description__detail-item">
+          <span className="description__detail--name" key={"Dimentions"}>
+            Dimentions
+          </span>
+          <span className="description__detail--value">{dimentions}</span>
+        </li>
+        <li className="description__detail-item">
+          <span className="description__detail--name" key={"Weight"}>
+            Weight
+          </span>
+          <span className="description__detail--value">{weight}</span>
         </li>
       </ul>
     </DescriptionStyled>
