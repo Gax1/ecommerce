@@ -5,7 +5,7 @@ const HeaderStyled = styled.header`
   flex-direction: column;
   padding-left: 5%;
   padding-right: 5%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid grey;
   flex-wrap: wrap;
 
   .header {
@@ -21,10 +21,11 @@ const HeaderStyled = styled.header`
       width: 60px;
       height: 60px;
       border-radius: 10px;
-      background-color: rgb(192, 192, 192, 0.4);
       display: flex;
       align-items: center;
       justify-content: center;
+      border: 1.5px solid grey;
+      box-shadow: grey 0px 2px 2px;
     }
     &__breadcrumb {
       text-align: center;
