@@ -7,9 +7,9 @@ const PhoneCard = ({ phone: { brand, model, price, imgUrl } }) => {
         <img src={imgUrl} alt={`${brand} phone`} />
       </div>
       <div className="phone-card__data-container">
-        <span className="phone-card__data-container--brand">
+        <h3 className="phone-card__data-container--brand">
           {brand.toUpperCase()}
-        </span>
+        </h3>
         <span className="phone-card__data-container--model">{model}</span>
         <span className="phone-card__data-container--price">{`$${price}.00`}</span>
       </div>

@@ -17,6 +17,7 @@ const PhoneCardStyled = styled.section`
       &--brand {
         font-weight: bold;
         font-size: 1.25rem;
+        margin: inherit;
       }
       &--price {
         font-weight: 900;
