@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const SearchComponentStyled = styled.div`
+const SearchBarStyled = styled.div`
   padding: 3rem 1.5rem;
 
   .search-box {
@@ -29,4 +29,4 @@ const SearchComponentStyled = styled.div`
   }
 `;
 
-export default SearchComponentStyled;
+export default SearchBarStyled;
