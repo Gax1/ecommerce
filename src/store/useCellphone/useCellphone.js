@@ -18,7 +18,17 @@ const useCellphone = () => {
     }
   };
 
-  return { uploadCellPhones };
+  const getCellPhoneById = async (id) => {
+    try {
+      const { data } = await axios.get(`${url}/api/product/${id}`);
+
+      return data;
+    } catch (error) {
+      return error;
+    }
+  };
+
+  return { uploadCellPhones, getCellPhoneById };
 };
 
 export default useCellphone;
