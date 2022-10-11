@@ -1,13 +1,16 @@
 import { renderHook } from "@testing-library/react";
 import useCellphone from "./useCellphone";
 import Wrapper from "../../test-utils/Wrapper/Wrapper";
-import { cellphonesTestList } from "../../test-utils/utils/test-variables";
+import {
+  cellphoneDetailTest,
+  cellphonesTestList,
+} from "../../test-utils/utils/test-variables";
 import { server } from "../../mocks/server";
 import { rest } from "msw";
 import apiUrl from "../../utils/env/apiUrl";
 
 describe("Given the useCellphone hook", () => {
-  describe("When the uploadCellphones method is called", () => {
+  describe("When the uploadCellphones function is called", () => {
     const {
       result: {
         current: { uploadCellPhones },
@@ -31,6 +34,29 @@ describe("Given the useCellphone hook", () => {
       const cellPhonesList = await uploadCellPhones();
 
       expect(cellPhonesList).toBeInstanceOf(Error);
+    });
+  });
+
+  describe("And when the getCellPhoneById function is called", () => {
+    const {
+      result: {
+        current: { getCellPhoneById },
+      },
+    } = renderHook(() => useCellphone(), { wrapper: Wrapper });
+    test("Then if it's successed it should return the cellphone received", async () => {
+      const successId = "success";
+
+      const cellphoneReceived = await getCellPhoneById(successId);
+
+      expect(cellphoneReceived).toStrictEqual(cellphoneDetailTest);
+    });
+
+    test("And then if it fails it should return the error received", async () => {
+      const errorId = "error";
+
+      const dataReceived = await getCellPhoneById(errorId);
+
+      expect(dataReceived).toBeInstanceOf(Error);
     });
   });
 });
