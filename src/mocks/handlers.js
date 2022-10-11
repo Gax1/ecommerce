@@ -19,4 +19,11 @@ export const handlers = [
 
     return res(ctx.status(status), ctx.json(response));
   }),
+
+  rest.get(`${apiUrl.url}/api/product/error`, (req, res, ctx) => {
+    const status = 400;
+const errorResponse = new Error("Bad request")
+
+    return res(ctx.status(status), ctx.json(errorResponse));
+  }),
 ];

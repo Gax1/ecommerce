@@ -20,7 +20,6 @@ export const cellphoneDetailTest = {
   model: "test-model",
   price: "test-price",
   imgUrl: "test-image-url",
-  networkTechnology: "test-network-tech",
   cpu: "test-cpu",
   ram: "test-ram",
   displayResolution: "test-resolution",
