@@ -1,13 +1,13 @@
 import { renderHook } from "@testing-library/react";
 import useCellphone from "./useCellphone";
-import Wrapper from "../../test-utils/Wrapper/Wrapper";
+import Wrapper from "../../../test-utils/Wrapper/Wrapper";
 import {
   cellphoneDetailTest,
   cellphonesTestList,
-} from "../../test-utils/utils/test-variables";
-import { server } from "../../mocks/server";
+} from "../../../test-utils/utils/test-variables";
+import { server } from "../../../mocks/server";
 import { rest } from "msw";
-import apiUrl from "../../utils/env/apiUrl";
+import apiUrl from "../../../utils/env/apiUrl";
 
 describe("Given the useCellphone hook", () => {
   describe("When the uploadCellphones function is called", () => {
