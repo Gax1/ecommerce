@@ -1,6 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialCellphonesState = [{}];
+const initialCellphonesState = [
+  {
+    id: "ZmGrkLRPXOTpxsU4jjAcv",
+    brand: "Acer",
+    model: "Iconia Talk S",
+    price: "170",
+    imgUrl:
+      "https://front-test-api.herokuapp.com/images/ZmGrkLRPXOTpxsU4jjAcv.jpg",
+  },
+];
 
 const cellphoneSlice = createSlice({
   name: "cellphone",

@@ -23,5 +23,14 @@ describe("Given a PhoneCard component", () => {
       expect(price).toBeInTheDocument();
       expect(image).toBeInTheDocument();
     });
+    test("Then when the price is not available it should show no stock", () => {
+      const priceText = "No Stock";
+
+      render(<PhoneCard phone={cellphonesTestList[1]} />, { wrapper: Wrapper });
+
+      const noStock = screen.getByText(priceText);
+
+      expect(noStock).toBeInTheDocument();
+    });
   });
 });

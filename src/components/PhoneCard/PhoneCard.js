@@ -11,7 +11,9 @@ const PhoneCard = ({ phone: { brand, model, price, imgUrl } }) => {
           {brand.toUpperCase()}
         </h3>
         <span className="phone-card__data-container--model">{model}</span>
-        <span className="phone-card__data-container--price">{`$${price}.00`}</span>
+        <span className="phone-card__data-container--price">
+          {price !== "" ? `$${price}.00` : "No Stock"}
+        </span>
       </div>
     </PhoneCardStyled>
   );
