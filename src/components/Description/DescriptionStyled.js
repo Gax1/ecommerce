@@ -3,9 +3,11 @@ import styled from "styled-components";
 const DescriptionStyled = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
   padding: 20px;
   width: 600px;
+  text-align: justify;
+
   .description {
     &__title {
       font-weight: 400;
@@ -15,6 +17,7 @@ const DescriptionStyled = styled.div`
 
     &__price {
       font-size: 28px;
+      margin-bottom: 20px;
     }
 
     &__details {
@@ -23,12 +26,15 @@ const DescriptionStyled = styled.div`
       flex-direction: column;
       align-content: space-between;
       width: 320px;
+      gap: 20px;
     }
 
     &__detail {
       &-item {
         display: flex;
         justify-content: space-between;
+        border-bottom: 1px solid black;
+        padding-bottom: 20px;
       }
 
       &--value {

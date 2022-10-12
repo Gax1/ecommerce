@@ -16,7 +16,7 @@ describe("Given the Description component", () => {
         expect(listItem).toBeInTheDocument();
       });
       expect(list).toBeInTheDocument();
-      expect(listItems).toHaveLength(8);
+      expect(listItems).toHaveLength(9);
     });
   });
 });
