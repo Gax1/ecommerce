@@ -5,8 +5,8 @@ import Description from "./Description";
 
 describe("Given the Description component", () => {
   describe("When instantiated with a cellphone data", () => {
-    test("Then it should show a list with 8 items", () => {
-      render(<Description cellphone={cellphoneDetailTest} />, {
+    test("Then it should show a list with 9 items", () => {
+      render(<Description cellphone={cellphoneDetailTest[0]} />, {
         wrapper: Wrapper,
       });
       const list = screen.getByRole("list");
@@ -17,6 +17,18 @@ describe("Given the Description component", () => {
       });
       expect(list).toBeInTheDocument();
       expect(listItems).toHaveLength(9);
+    });
+  });
+  describe("When the price is undefined", () => {
+    test("Then it should show a string", () => {
+      const noStock = "No Stock";
+
+      render(<Description cellphone={cellphoneDetailTest[1]} />, {
+        wrapper: Wrapper,
+      });
+      const listItem = screen.getByText(noStock);
+
+      expect(listItem).toBeInTheDocument();
     });
   });
 });
