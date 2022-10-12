@@ -8,6 +8,11 @@ const PhoneCardStyled = styled.section`
   text-align: center;
   box-shadow: grey 0px 3px 8px;
   padding: 18px;
+
+  @media (min-width: 1200px) {
+    width: 250px;
+    font-size: 1.25rem;
+  }
   .phone-card {
     &__data-container {
       display: flex;

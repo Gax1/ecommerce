@@ -7,6 +7,11 @@ const HeaderStyled = styled.header`
   padding-right: 5%;
   border-bottom: 2px solid grey;
   flex-wrap: wrap;
+  font-size: 20px;
+
+  @media (min-width: 1080px) {
+    font-size: 32px;
+  }
 
   .header {
     &__title-container {
