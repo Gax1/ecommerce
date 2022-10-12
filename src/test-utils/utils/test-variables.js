@@ -1,19 +1,22 @@
 export const cellphonesTestList = [
   {
-    id: "test-id",
+    id: "0",
     brand: "test-brand",
     model: "test-model",
-    price: "test-price",
-    imgUrl: "test-img",
-  },
-  {
-    id: "test-id",
-    brand: "test-brand",
-    model: "test-model",
-    price: "test-price",
+    price: "",
     imgUrl: "test-img",
   },
 ];
+
+for (let i = 0; i < 22; i++) {
+  cellphonesTestList.push({
+    id: `${i + 1}`,
+    brand: "test-brand",
+    model: "test-model",
+    price: "test-price",
+    imgUrl: "test-img",
+  });
+}
 
 export const cellphoneDetailTest = {
   brand: "test-brand",

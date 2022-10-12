@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const SearchBarStyled = styled.div`
   padding: 3rem 1.5rem;
+  text-align: center;
 
   .search-box {
     &__input {
@@ -13,8 +14,10 @@ const SearchBarStyled = styled.div`
       border: 1.5px solid grey;
     }
     &__label {
+      font-family: inherit;
+      font-size: 1.25rem;
       display: block;
-      transform: translate(0.25rem, -29px);
+      transform: translate(-2.75rem, -33px);
       padding-left: 10px;
       transition: all 0.2s ease-out;
       color: #999;

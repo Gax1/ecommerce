@@ -8,7 +8,7 @@ describe("Given a PhoneCard component", () => {
     test("Then it should show a title with the brand, a text with the model, the price and an image", () => {
       const titleText = "test-brand".toUpperCase();
       const modelText = "test-model";
-      const priceText = "$test-price.00";
+      const priceText = "No Stock";
       const imageAlt = "test-brand phone";
 
       render(<PhoneCard phone={cellphonesTestList[0]} />, { wrapper: Wrapper });
@@ -22,6 +22,15 @@ describe("Given a PhoneCard component", () => {
       expect(model).toBeInTheDocument();
       expect(price).toBeInTheDocument();
       expect(image).toBeInTheDocument();
+    });
+    test("Then when the price is not available it should show no stock", () => {
+      const priceText = "$test-price.00";
+
+      render(<PhoneCard phone={cellphonesTestList[1]} />, { wrapper: Wrapper });
+
+      const noStock = screen.getByText(priceText);
+
+      expect(noStock).toBeInTheDocument();
     });
   });
 });

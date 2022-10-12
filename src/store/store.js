@@ -4,7 +4,7 @@ import { searchReducer } from "./feature/searchSlice/searchSlice";
 
 export const store = configureStore({
   reducer: {
-    cellphone: cellphoneReducer,
+    cellphones: cellphoneReducer,
     search: searchReducer,
   },
 });

@@ -1,6 +1,6 @@
 import { renderHook } from "@testing-library/react";
 import useCellphone from "./useCellphone";
-import Wrapper from "../../../test-utils/Wrapper/Wrapper";
+import { Wrapper } from "../../../test-utils/Wrapper/Wrapper";
 import {
   cellphoneDetailTest,
   cellphonesTestList,
