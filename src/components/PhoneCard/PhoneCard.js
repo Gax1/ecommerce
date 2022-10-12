@@ -4,7 +4,13 @@ const PhoneCard = ({ phone: { brand, model, price, imgUrl } }) => {
   return (
     <PhoneCardStyled>
       <div className="phone-card__image-container">
-        <img src={imgUrl} alt={`${brand} phone`} />
+        <img
+          src={imgUrl}
+          alt={`${brand} phone`}
+          loading="lazy"
+          width="160px"
+          height="210px"
+        />
       </div>
       <div className="phone-card__data-container">
         <h3 className="phone-card__data-container--brand">
