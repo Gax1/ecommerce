@@ -21,6 +21,7 @@ const Pagination = ({ cards, setCards }) => {
         className="pagination__button"
         onClick={handleOnClickMinus}
         visibility={cards === 0 ? "hidden" : "visible"}
+        data-testid="button-minus"
       />
       <div className="pagination__page--container">
         <span className="pagination__page--pages">{page - 1}</span>
@@ -31,6 +32,7 @@ const Pagination = ({ cards, setCards }) => {
         className="pagination__button"
         onClick={handleOnClickPlus}
         visibility={cards === 80 ? "hidden" : "visible"}
+        data-testid="button-plus"
       />
     </PaginationStyled>
   );

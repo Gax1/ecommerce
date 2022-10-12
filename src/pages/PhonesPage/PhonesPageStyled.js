@@ -1,4 +1,4 @@
-const { default: styled } = require("styled-components");
+import styled from "styled-components";
 
 const PhonesPageStyled = styled.main`
   .phones-card {
@@ -6,7 +6,7 @@ const PhonesPageStyled = styled.main`
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      margin-bottom: 10px;
+      justify-content: space-around;
     }
     &__item {
       padding: 20px;

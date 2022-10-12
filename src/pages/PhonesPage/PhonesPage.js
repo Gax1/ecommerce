@@ -1,16 +1,16 @@
 import PhonesPageStyled from "./PhonesPageStyled";
-import SearchBar from "../components/SearchBar/SearchBar";
+import SearchBar from "../../components/SearchBar/SearchBar";
 import { useSelector } from "react-redux";
-import PhoneCard from "../components/PhoneCard/PhoneCard";
-import searchPhonesList from "../utils/searchPhonesList/searchPhonesList";
+import PhoneCard from "../../components/PhoneCard/PhoneCard";
+import searchPhonesList from "../../utils/searchPhonesList/searchPhonesList";
 import { useState } from "react";
-import Pagination from "../components/Pagionation/Pagination";
+import Pagination from "../../components/Pagionation/Pagination";
 
 const PhonesPage = () => {
   const { cellphones, search } = useSelector((state) => state);
   const [cards, setCards] = useState(0);
 
-  const searchedPhones = searchPhonesList(cellphones, search, cards, setCards);
+  const searchedPhones = searchPhonesList(cellphones, search, cards);
 
   return (
     <PhonesPageStyled>

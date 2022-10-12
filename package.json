@@ -23,8 +23,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --passWithNoTests",
-    "test:dev": "react-scripts test --coverage --passWithNoTests",
+    "test": "react-scripts test",
+    "test:dev": "react-scripts test --coverage",
     "lint": "eslint src",
     "eject": "react-scripts eject",
     "prepare": "husky install"

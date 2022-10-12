@@ -6,11 +6,9 @@ import Description from "./Description";
 describe("Given the Description component", () => {
   describe("When instantiated with a cellphone data", () => {
     test("Then it should show a list with 8 items", () => {
-      render(
-        <Wrapper>
-          <Description cellphone={cellphoneDetailTest} />
-        </Wrapper>
-      );
+      render(<Description cellphone={cellphoneDetailTest} />, {
+        wrapper: Wrapper,
+      });
       const list = screen.getByRole("list");
       const listItems = screen.getAllByRole("listitem");
 

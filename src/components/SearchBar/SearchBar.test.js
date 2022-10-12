@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import SearchBar from "./SearchBar";
-import Wrapper from "../../test-utils/Wrapper/Wrapper";
+import { Wrapper } from "../../test-utils/Wrapper/Wrapper";
 import userEvent from "@testing-library/user-event";
 import { changeSearchActionCreator } from "../../store/feature/searchSlice/searchSlice";
 
