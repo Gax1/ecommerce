@@ -15,13 +15,16 @@ const PhonesPage = () => {
   return (
     <PhonesPageStyled>
       <SearchBar />
-      <ul className="phones-card__list">
-        {searchedPhones.map((phone) => (
-          <li key={phone.id} className="phones-card__item">
-            <PhoneCard phone={phone} />
-          </li>
-        ))}
-      </ul>
+      {searchedPhones.length !== 0 && (
+        <ul className="phones-card__list">
+          {searchedPhones.map((phone) => (
+            <li key={phone.id} className="phones-card__item">
+              <PhoneCard phone={phone} />
+            </li>
+          ))}
+        </ul>
+      )}
+      {searchedPhones.length === 0 && <p>Not found any match</p>}
       {searchedPhones.length > 19 && (
         <Pagination cards={cards} setCards={setCards} />
       )}
