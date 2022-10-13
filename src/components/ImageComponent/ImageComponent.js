@@ -1,7 +1,9 @@
 import "./ImageComponent.css";
 
-const ImageComponent = ({ img, model }) => {
-  return <img src={img} alt={`${model} phone`} className="image-container" />;
+const ImageComponent = ({ phone: { imgUrl, model } }) => {
+  return (
+    <img src={imgUrl} alt={`${model} phone`} className="image-container" />
+  );
 };
 
 export default ImageComponent;

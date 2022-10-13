@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import apiUrl from "../../../utils/env/apiUrl";
 import { uploadCellPhonesActionCreator } from "../../feature/cellphoneSlice/cellphoneSlice";
@@ -18,15 +19,19 @@ const useCellphone = () => {
     }
   };
 
-  const getCellPhoneById = async (id) => {
-    try {
-      const { data } = await axios.get(`${url}/api/product/${id}`);
+  const getCellPhoneById = useCallback(
+    async (id) => {
+      try {
+        const { data } = await axios.get(`${url}/api/product/${id}`);
 
-      return data;
-    } catch (error) {
-      return error;
-    }
-  };
+        return data;
+      } catch (error) {
+        return error;
+      }
+    },
+    [url]
+  );
+
   const addToCart = async ({ id, colorCode, storageCode }) => {
     try {
       const { data } = await axios.post(`${url}/api/cart`, {

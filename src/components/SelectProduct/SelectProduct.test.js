@@ -4,7 +4,7 @@ import { Wrapper } from "../../test-utils/Wrapper/Wrapper";
 import { cellphoneDetailTest } from "../../test-utils/utils/test-variables";
 import userEvent from "@testing-library/user-event";
 
-describe("Given a select prodcut component", () => {
+describe("Given a select product component", () => {
   const phone = {
     id: "id",
     options: cellphoneDetailTest[0].options,

@@ -10,7 +10,7 @@ const Description = ({
     displayResolution,
     battery,
     primaryCamera,
-    secondaryCmera,
+    secondaryCamera,
     os,
     dimentions,
     weight,
@@ -55,9 +55,11 @@ const Description = ({
           <span className="description__detail--name" key={"secondary-camera"}>
             Secondary Camera
           </span>
-          <span className="description__detail--value">
-            {secondaryCmera.join(" - ")}
-          </span>
+          {secondaryCamera && (
+            <span className="description__detail--value">
+              {secondaryCamera.join(" - ")}
+            </span>
+          )}
         </li>
         <li className="description__detail-item">
           <span className="description__detail--name" key={"Operative System"}>
