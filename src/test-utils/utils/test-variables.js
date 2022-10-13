@@ -63,6 +63,10 @@ export const cellphoneDetailTest = [
           code: 1000,
           name: "Black",
         },
+        {
+          code: 1111,
+          name: "Red",
+        },
       ],
       storages: [
         {
@@ -150,3 +154,9 @@ export const cellphoneDetailTest = [
     },
   },
 ];
+
+export const postTestData = {
+  id: "test-id",
+  colorCode: "test-color",
+  storageCode: "test-storage",
+};

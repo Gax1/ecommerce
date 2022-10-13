@@ -22,8 +22,12 @@ export const handlers = [
 
   rest.get(`${apiUrl.url}/api/product/error`, (req, res, ctx) => {
     const status = 400;
-const errorResponse = new Error("Bad request")
+    const errorResponse = new Error("Bad request");
 
     return res(ctx.status(status), ctx.json(errorResponse));
+  }),
+
+  rest.post(`${apiUrl.url}/api/cart`, (req, res, ctx) => {
+    return res(ctx.status(200), ctx.json({ count: "1" }));
   }),
 ];
