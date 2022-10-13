@@ -85,11 +85,7 @@ describe("Given the useCellphone hook", () => {
         })
       );
 
-      const returned = await addToCart(
-        postTestData.id,
-        postTestData.colorCode,
-        postTestData.storageCode
-      );
+      const returned = await addToCart(postTestData);
 
       expect(returned).toBeInstanceOf(Error);
     });

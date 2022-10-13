@@ -27,7 +27,7 @@ const useCellphone = () => {
       return error;
     }
   };
-  const addToCart = async (id, colorCode, storageCode) => {
+  const addToCart = async ({ id, colorCode, storageCode }) => {
     try {
       const { data } = await axios.post(`${url}/api/cart`, {
         id,

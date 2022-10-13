@@ -63,6 +63,10 @@ export const cellphoneDetailTest = [
           code: 1000,
           name: "Black",
         },
+        {
+          code: 1111,
+          name: "Red",
+        },
       ],
       storages: [
         {

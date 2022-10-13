@@ -5,6 +5,7 @@ const SelectorsStyled = styled.div`
   display: flex;
   flex-direction: row;
   gap: 50px;
+  justify-content: center;
 
   .selectors__container {
     display: flex;
@@ -25,7 +26,7 @@ const SelectorsStyled = styled.div`
     border: solid 1px #cccccc;
     position: relative;
     margin-bottom: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
   [type="checkbox"]:checked::before {

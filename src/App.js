@@ -6,6 +6,11 @@ import "./App.css";
 import SelectProduct from "./components/SelectProduct/SelectProduct";
 import { cellphoneDetailTest } from "./test-utils/utils/test-variables";
 
+const phone = {
+  id: "id",
+  options: cellphoneDetailTest[0].options,
+};
+
 const App = () => {
   const { uploadCellPhones } = useCellphone();
 
@@ -13,7 +18,7 @@ const App = () => {
 
   return (
     <>
-      <SelectProduct options={cellphoneDetailTest[0].options} />
+      <SelectProduct phone={phone} />
       {/* <div className="main-container">
         <Header itemsOnCart={10} />
         <PhonesPage />
