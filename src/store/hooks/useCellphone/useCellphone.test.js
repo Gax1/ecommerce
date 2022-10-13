@@ -4,6 +4,7 @@ import { Wrapper } from "../../../test-utils/Wrapper/Wrapper";
 import {
   cellphoneDetailTest,
   cellphonesTestList,
+  postTestData,
 } from "../../../test-utils/utils/test-variables";
 import { server } from "../../../mocks/server";
 import { rest } from "msw";
@@ -57,6 +58,40 @@ describe("Given the useCellphone hook", () => {
       const dataReceived = await getCellPhoneById(errorId);
 
       expect(dataReceived).toBeInstanceOf(Error);
+    });
+  });
+  describe("When the addToCart function its called", () => {
+    const {
+      result: {
+        current: { addToCart },
+      },
+    } = renderHook(() => useCellphone(), { wrapper: Wrapper });
+    test("Then it should return an object with count property", async () => {
+      const expectedReturn = { count: "1" };
+
+      const returned = await addToCart(
+        postTestData.id,
+        postTestData.colorCode,
+        postTestData.storageCode
+      );
+
+      expect(returned).toStrictEqual(expectedReturn);
+    });
+
+    test("Then if there was an error it should an error", async () => {
+      server.use(
+        rest.post(`${apiUrl.url}/api/cart`, (req, res, ctx) => {
+          return res(ctx.status(403), ctx.json(new Error("error")));
+        })
+      );
+
+      const returned = await addToCart(
+        postTestData.id,
+        postTestData.colorCode,
+        postTestData.storageCode
+      );
+
+      expect(returned).toBeInstanceOf(Error);
     });
   });
 });

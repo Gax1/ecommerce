@@ -150,3 +150,9 @@ export const cellphoneDetailTest = [
     },
   },
 ];
+
+export const postTestData = {
+  id: "test-id",
+  colorCode: "test-color",
+  storageCode: "test-storage",
+};

@@ -25,6 +25,7 @@ const SelectorsStyled = styled.div`
     border: solid 1px #cccccc;
     position: relative;
     margin-bottom: 10px;
+    border-radius: 10px;
   }
 
   [type="checkbox"]:checked::before {

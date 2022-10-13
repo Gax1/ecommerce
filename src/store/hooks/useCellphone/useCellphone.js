@@ -27,8 +27,21 @@ const useCellphone = () => {
       return error;
     }
   };
+  const addToCart = async (id, colorCode, storageCode) => {
+    try {
+      const { data } = await axios.post(`${url}/api/cart`, {
+        id,
+        colorCode,
+        storageCode,
+      });
 
-  return { uploadCellPhones, getCellPhoneById };
+      return data;
+    } catch (error) {
+      return error;
+    }
+  };
+
+  return { uploadCellPhones, getCellPhoneById, addToCart };
 };
 
 export default useCellphone;
