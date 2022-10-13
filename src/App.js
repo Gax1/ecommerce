@@ -18,9 +18,9 @@ const App = () => {
 
   return (
     <>
+      <Header />
       <SelectProduct phone={phone} />
       {/* <div className="main-container">
-        <Header itemsOnCart={10} />
         <PhonesPage />
       </div> */}
     </>

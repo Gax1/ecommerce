@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { uploadCartActionCreator } from "../../store/feature/cartSlice/cartSlice";
 import useCellphone from "../../store/hooks/useCellphone/useCellphone";
 import Selectors from "../Selectors/Selectors";
 import SelectProductStyled from "./SelectProductStyled";
@@ -15,6 +17,8 @@ const SelectProduct = ({
     storageCode: storages[0].code,
   };
 
+  const dispatch = useDispatch();
+
   const [preferences, setPreferences] = useState(initialPreferences);
 
   const setStorageCode = (storageCode) => {
@@ -30,7 +34,8 @@ const SelectProduct = ({
   const handleOnSubmit = async (event) => {
     event.preventDefault();
 
-    await addToCart(preferences);
+    const itemsOnCart = await addToCart(preferences);
+    dispatch(uploadCartActionCreator(itemsOnCart.count));
   };
 
   return (

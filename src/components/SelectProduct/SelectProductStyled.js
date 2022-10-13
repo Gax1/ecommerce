@@ -21,6 +21,7 @@ const SelectProductStyled = styled.div`
         cursor: pointer;
         height: 25px;
         width: 250px;
+        box-shadow: grey 0px 2px 2px;
       }
     }
   }
