@@ -40,7 +40,11 @@ const SelectProduct = ({
 
   return (
     <SelectProductStyled>
-      <form className="product__form" onSubmit={handleOnSubmit}>
+      <form
+        className="product__form"
+        onSubmit={handleOnSubmit}
+        data-testid="form-checkbox"
+      >
         <span className="product__form--text">Select the Color</span>
         <Selectors
           options={colors}

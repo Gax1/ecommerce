@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "./components/Header/Header";
-import PhonesPage from "./pages/PhonesPage/PhonesPage";
 import useCellphone from "./store/hooks/useCellphone/useCellphone";
 import "./App.css";
 import SelectProduct from "./components/SelectProduct/SelectProduct";
