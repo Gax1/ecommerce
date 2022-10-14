@@ -25,7 +25,6 @@ const SelectProductStyled = styled.div`
         box-shadow: grey 0px 2px 2px;
 
         @media (min-width: 1080px) {
-          font-size: 32px;
           width: 350px;
           height: 40px;
         }
