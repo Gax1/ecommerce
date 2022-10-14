@@ -24,7 +24,8 @@ export const cellphoneDetailTest = [
     brand: "Acer",
     model: "Iconia Talk S",
     price: "170",
-    imgUrl: "",
+    imgUrl:
+      "https://front-test-api.herokuapp.com/images/ZmGrkLRPXOTpxsU4jjAcv.jpg",
     networkTechnology: "GSM / HSPA / LTE",
     networkSpeed: "HSPA 42.2/11.5 Mbps  LTE Cat4 150/50 Mbps",
     gprs: "Yes",
@@ -45,7 +46,7 @@ export const cellphoneDetailTest = [
     internalMemory: ["16 GB", "32 GB"],
     ram: "2 GB RAM",
     primaryCamera: ["13 MP", "autofocus"],
-    secondaryCmera: ["2 MP", "720p"],
+    secondaryCamera: ["2 MP", "720p"],
     speaker: "Yes",
     audioJack: "Yes",
     wlan: ["Wi-Fi 802.11 a/b/g/n", "Wi-Fi Direct", "hotspot"],

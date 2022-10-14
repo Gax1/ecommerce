@@ -10,7 +10,7 @@ const Description = ({
     displayResolution,
     battery,
     primaryCamera,
-    secondaryCmera,
+    secondaryCamera,
     os,
     dimentions,
     weight,
@@ -18,9 +18,9 @@ const Description = ({
 }) => {
   return (
     <DescriptionStyled>
-      <h2 className="description__title">
-        {brand} {model}
-      </h2>
+      <span className="description__price">
+        {price !== "" ? `$${price}.00` : "No Stock"}
+      </span>
 
       <ul className="description__details">
         <li className="description__detail-item" key={"cpu"}>
@@ -48,17 +48,27 @@ const Description = ({
             Main Camera
           </span>
           <span className="description__detail--value">
-            {primaryCamera.join(" - ")}
+            {Array.isArray(primaryCamera)
+              ? primaryCamera.join(" - ")
+              : primaryCamera}
           </span>
         </li>
-        <li className="description__detail-item">
-          <span className="description__detail--name" key={"secondary-camera"}>
-            Secondary Camera
-          </span>
-          <span className="description__detail--value">
-            {secondaryCmera.join(" - ")}
-          </span>
-        </li>
+        {secondaryCamera && (
+          <li className="description__detail-item">
+            {
+              <span
+                className="description__detail--name"
+                key={"secondary-camera"}
+              >
+                Secondary Camera
+              </span>
+            }
+
+            <span className="description__detail--value">
+              {secondaryCamera.join(" - ")}
+            </span>
+          </li>
+        )}
         <li className="description__detail-item">
           <span className="description__detail--name" key={"Operative System"}>
             Operative System
@@ -78,9 +88,6 @@ const Description = ({
           <span className="description__detail--value">{weight}</span>
         </li>
       </ul>
-      <span className="description__price">
-        {price !== "" ? `$${price}.00` : "No Stock"}
-      </span>
     </DescriptionStyled>
   );
 };

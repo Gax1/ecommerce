@@ -6,7 +6,7 @@ const cartSlice = createSlice({
   name: "cart",
   initialState: initialCount,
   reducers: {
-    uploadCart: (previusState, action) => action.payload,
+    uploadCart: (previusState, action) => previusState + action.payload,
   },
 });
 
