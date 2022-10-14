@@ -32,7 +32,9 @@ const HeaderStyled = styled.header`
       padding: 10px 8px;
 
       &--cart {
-        width: 38px;
+        width: 70px;
+        height: 70px;
+        font-size: larger;
       }
     }
     &__breadcrumb {

@@ -17,7 +17,7 @@ const Header = () => {
           {cart !== 0 && (
             <span className="header__itemsOnCart--countOfItems">{cart}</span>
           )}
-          <GiShoppingCart size="lg" className="header__itemsOnCart--cart" />
+          <GiShoppingCart className="header__itemsOnCart--cart" />
         </div>
       </div>
       <Breadcrumb className="header__breadcrumb" />

@@ -3,35 +3,46 @@ import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import apiUrl from "../../../utils/env/apiUrl";
 import { uploadCellPhonesActionCreator } from "../../feature/cellphoneSlice/cellphoneSlice";
-import { toggleLoadingActionCreator } from "../../feature/loadingSlice/loadingSlice";
+import {
+  closeLoadingActionCreator,
+  openLoadingActionCreator,
+} from "../../feature/loadingSlice/loadingSlice";
 
 const useCellphone = () => {
   const { url } = apiUrl;
   const dispatch = useDispatch();
 
-  const uploadCellPhones = async () => {
-    dispatch(toggleLoadingActionCreator());
-    try {
-      const { data } = await axios.get(`${url}/api/product/`);
+  const uploadCellPhones = useCallback(
+    async (uploadData) => {
+      dispatch(openLoadingActionCreator());
+      try {
+        const { data } = await axios.get(`${url}/api/product/`);
 
-      dispatch(uploadCellPhonesActionCreator(data));
-      dispatch(toggleLoadingActionCreator());
-      return data;
-    } catch (error) {
-      dispatch(toggleLoadingActionCreator());
-      return error;
-    }
-  };
+        dispatch(uploadCellPhonesActionCreator(data));
+        dispatch(closeLoadingActionCreator());
+        localStorage.setItem("data", JSON.stringify(data));
+        localStorage.setItem(
+          "timeStamp",
+          JSON.stringify(new Date().getHours())
+        );
+        return data;
+      } catch (error) {
+        dispatch(closeLoadingActionCreator());
+        return error;
+      }
+    },
+    [url, dispatch]
+  );
 
   const getCellPhoneById = useCallback(
     async (id) => {
-      dispatch(toggleLoadingActionCreator());
+      dispatch(openLoadingActionCreator());
       try {
         const { data } = await axios.get(`${url}/api/product/${id}`);
-        dispatch(toggleLoadingActionCreator());
+        dispatch(closeLoadingActionCreator());
         return data;
       } catch (error) {
-        dispatch(toggleLoadingActionCreator());
+        dispatch(closeLoadingActionCreator());
         return error;
       }
     },
@@ -40,16 +51,16 @@ const useCellphone = () => {
 
   const addToCart = async ({ id, colorCode, storageCode }) => {
     try {
-      dispatch(toggleLoadingActionCreator());
+      dispatch(openLoadingActionCreator());
       const { data } = await axios.post(`${url}/api/cart`, {
         id,
         colorCode,
         storageCode,
       });
-      dispatch(toggleLoadingActionCreator());
+      dispatch(closeLoadingActionCreator());
       return data;
     } catch (error) {
-      dispatch(toggleLoadingActionCreator());
+      dispatch(closeLoadingActionCreator());
       return error;
     }
   };
