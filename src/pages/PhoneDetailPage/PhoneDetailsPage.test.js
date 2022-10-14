@@ -5,7 +5,6 @@ import { rest } from "msw";
 import { server } from "../../mocks/server";
 import { cellphoneDetailTest } from "../../test-utils/utils/test-variables";
 import apiUrl from "../../utils/env/apiUrl";
-import { act } from "react-dom/test-utils";
 
 describe("Given a Phone Details component", () => {
   describe("When rendered", () => {
