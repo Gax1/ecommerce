@@ -13,7 +13,7 @@ const DescriptionStyled = styled.div`
   .description {
     &__title {
       font-weight: 400;
-      font-size: 32px;
+      font-size: 20px;
       margin: 0;
     }
 
