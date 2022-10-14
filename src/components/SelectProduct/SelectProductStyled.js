@@ -6,7 +6,7 @@ const SelectProductStyled = styled.div`
   flex-direction: row;
 
   @media (min-width: 1080px) {
-    font-size: 25px;
+    font-size: 32px;
   }
 
   .product {
@@ -21,7 +21,14 @@ const SelectProductStyled = styled.div`
         cursor: pointer;
         height: 25px;
         width: 250px;
+
         box-shadow: grey 0px 2px 2px;
+
+        @media (min-width: 1080px) {
+          font-size: 32px;
+          width: 350px;
+          height: 40px;
+        }
       }
     }
   }

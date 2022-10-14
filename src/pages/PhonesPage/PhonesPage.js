@@ -5,6 +5,7 @@ import PhoneCard from "../../components/PhoneCard/PhoneCard";
 import searchPhonesList from "../../utils/searchPhonesList/searchPhonesList";
 import { useState } from "react";
 import Pagination from "../../components/Pagionation/Pagination";
+import { Link } from "react-router-dom";
 
 const PhonesPage = () => {
   const { cellphones, search } = useSelector((state) => state);
@@ -19,7 +20,9 @@ const PhonesPage = () => {
         <ul className="phones-card__list">
           {searchedPhones.map((phone) => (
             <li key={phone.id} className="phones-card__item">
-              <PhoneCard phone={phone} />
+              <Link to={`/product/${phone.id}`}>
+                <PhoneCard phone={phone} />
+              </Link>
             </li>
           ))}
         </ul>

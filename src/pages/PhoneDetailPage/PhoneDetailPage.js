@@ -5,10 +5,11 @@ import PhoneDetailPageStyled from "./PhoneDetailPageStyled";
 import useCellphone from "../../store/hooks/useCellphone/useCellphone";
 import { useEffect, useState } from "react";
 import { cellphoneDetailTest } from "../../test-utils/utils/test-variables";
+import { Link, useParams } from "react-router-dom";
 
 const PhoneDetailPage = () => {
   const { getCellPhoneById } = useCellphone();
-  const id = "ZmGrkLRPXOTpxsU4jjAcv";
+  const { id } = useParams();
 
   const [phone, setPhone] = useState(cellphoneDetailTest[0]);
 
@@ -17,13 +18,21 @@ const PhoneDetailPage = () => {
       const data = await getCellPhoneById(id);
       setPhone(data);
     })();
-  }, [getCellPhoneById]);
+  }, [getCellPhoneById, id]);
 
   return (
     <PhoneDetailPageStyled>
-      <ImageComponent phone={phone} />
+      <Link to={"/home"}>
+        <span className="home-link">Back Home</span>
+      </Link>
+      <h2 className="phone__title">
+        {phone.brand} {phone.model}
+      </h2>
+      <div className="details__phone--container">
+        <ImageComponent phone={phone} />
+        <SelectProduct phone={phone} />
+      </div>
       <Description cellphone={phone} />
-      <SelectProduct phone={phone} />
     </PhoneDetailPageStyled>
   );
 };

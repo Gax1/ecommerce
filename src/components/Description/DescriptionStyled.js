@@ -7,6 +7,8 @@ const DescriptionStyled = styled.div`
   padding: 20px;
   width: 600px;
   text-align: justify;
+  flex-wrap: wrap;
+  width: 60%;
 
   .description {
     &__title {
@@ -24,8 +26,9 @@ const DescriptionStyled = styled.div`
       font-size: large;
       display: flex;
       flex-direction: column;
-      align-content: space-between;
-      width: 320px;
+
+      font-size: 25px;
+
       gap: 20px;
     }
 
