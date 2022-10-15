@@ -31,8 +31,8 @@ const App = () => {
       {loading && <Loading />}
       <Header />
       <Routes>
-        <Route path="/" element={<Navigate to={"/home"} />} />
         <Route path="/home" element={<PhonesPage />} />
+        <Route path="/" element={<Navigate to={"/home"} />} />
         <Route path="/product/:id" element={<PhoneDetailPage />} />
       </Routes>
     </>
